@@ -1,0 +1,1 @@
+In this project we gonna learn how use echo and the use of some symbols like |, < and >.
