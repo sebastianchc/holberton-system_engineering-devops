@@ -1,1 +1,1 @@
-In this project we gonna learn how use echo and the use of some symbols like |, < and >.
+In this project we will learn to use the command echo, pipelines, redirections, and search for files and view their content.
