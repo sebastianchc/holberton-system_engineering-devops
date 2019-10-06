@@ -1,1 +1,1 @@
-In this project we learn to use basic Linux commands
+In this repository we learn to use basic Linux command line.
