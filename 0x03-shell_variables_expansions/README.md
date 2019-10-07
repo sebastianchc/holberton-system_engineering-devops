@@ -1,1 +1,1 @@
-Shell Variables
+In this project we will learn what the variables are, how to create them, name them and use them. We will also learn to create aliases.
