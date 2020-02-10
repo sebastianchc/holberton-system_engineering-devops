@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays its own PID
+proccess=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$proccess"
