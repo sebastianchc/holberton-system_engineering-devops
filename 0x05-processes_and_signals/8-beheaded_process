@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays its own PID
+process=$(pgrep -f 7-highlander)
+kill -9 "$process"
