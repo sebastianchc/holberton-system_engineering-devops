@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Displays its own PID
 touch /var/run/holbertonscript.pid
-chmod 777 /var/run/holbertonscript.pid
 echo $$ > /var/run/holbertonscript.pid
 function sigterm_handler()
 {
