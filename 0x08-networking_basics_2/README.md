@@ -1,0 +1,1 @@
+In this repository we learn to use basic Linux command line.
