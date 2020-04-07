@@ -1,4 +1,4 @@
 # kill proccess
 exec { 'killmenow' :
-  command => '/usr/bin/pkill'
+  command => '/usr/bin/pkill killmenow'
 }
