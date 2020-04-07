@@ -1,6 +1,4 @@
-# kill a process named killmenow
-exec { 'Terminated':
-  command => 'pkill killmenow',
-  path    => '/usr/bin/',
-  returns => [0,1],
+# kill proccess
+exec { 'killmenow' :
+  command => '/usr/bin/pkill'
 }
