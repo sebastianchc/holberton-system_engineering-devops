@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Dubugging 1 - task 0
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+service nginx restart
