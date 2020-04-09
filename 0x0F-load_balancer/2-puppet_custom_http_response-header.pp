@@ -1,19 +1,19 @@
 # Add HTTP header
-exec { 'Update' :
+exec { 'Update':
      command => '/usr/bin/apt-get -y update'
 }
 
-exec { 'Install' :
+exec { 'Install':
      require => Exec['Update'],
      command => '/usr/bin/apt-get -y install nginx'
 }
 
-exec { 'Header' :
+exec { 'Header':
      require => Exec['Install'],
-     command => '/bin/sed -i "s/server_name _;/server_name _;\n\taddheader X-Served-By \$hostname;/" /etc/nginx/sites-enabled/default'
+     command => '/bin/sed -i "s/server_name _;/server_name _;\n\tadd_header X-Served-By \$hostname;/" /etc/nginx/sites-enabled/default'
 }
 
-exec { 'Start' :
+exec { 'Start':
      require => Exec['Header'],
      command => '/usr/sbin/service nginx start'
 }
