@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # Display domain or subdomain information
+# shellcheck disable=SC2086
 dinfo () {
-    rtype=$(dig $2.$1 | awk '/ANSWER SECTION:/ {getline;print}' | cut -d$'\t' -f 3)
-    webip=$(dig $2.$1 | awk '/ANSWER SECTION:/ {getline;print}' | cut -d$'\t' -f 4)
-    echo "The subdomain $2 is a $rtype record and points to $webip"
+    domain_line=$(dig $2.$1 | awk '/ANSWER SECTION:/ {getline;print}')
+    r_type=$(echo $domain_line | cut -d " " -f 4)
+    web_ip=$(echo $domain_line | cut -d " " -f 5)
+    echo "The subdomain $2 is a $r_type record and points to $web_ip"
 }
 if [ $# -eq 1 ]; then
     dinfo "$1" "www"
