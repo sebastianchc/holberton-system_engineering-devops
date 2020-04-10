@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# whoami advanced
+if [ $# -eq 1 ]
+then
+    sudo -u "$1" whoami
+fi
