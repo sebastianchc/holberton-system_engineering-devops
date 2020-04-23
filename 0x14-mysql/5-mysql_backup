@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Create compress file of MySQL dump
+password=$1
+user="root"
+compress=$(date +"%m-%d-%Y")
+mysqldump --all-databases --user=$user --passsword=$password > backup.sql
+tar -czf "$compress".tar.gz backup.sql
