@@ -15,6 +15,6 @@ if __name__ == "__main__":
     for task in tasks:
         info_user[argv[1]].append({"task": task.get("title"),
                                    "completed": task.get("completed"),
-                                   "user": user.get("username")})
+                                   "username": user.get("username")})
     with open("{}.json".format(argv[1]), "w") as json_file:
         dump(info_user, json_file)
