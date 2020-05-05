@@ -14,8 +14,8 @@ if __name__ == "__main__":
     info_user = []
     for task in tasks:
         info_user.append([argv[1],
-                         user.get("username"),
-                         task.get("completed"),
+                          user.get("username"),
+                          task.get("completed"),
                           task.get("title")])
     with open("{}.csv".format(argv[1]), "w") as csv_file:
         writer = writer(csv_file, quoting=QUOTE_ALL)
