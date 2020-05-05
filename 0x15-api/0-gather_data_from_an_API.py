@@ -17,4 +17,4 @@ if __name__ == "__main__":
             complete.append(task)
     print("({})/({}):".format(len(complete), len(tasks)))
     for task in complete:
-        print("\t{}".format(task.get("title")))
+        print("\t {}".format(task.get("title")))
