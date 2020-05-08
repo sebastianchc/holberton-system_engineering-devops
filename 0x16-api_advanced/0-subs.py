@@ -6,7 +6,7 @@ from requests import get
 def number_of_subscribers(subreddit):
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     header = {"User-Agent": "Chrome"}
-    subreddit = get(url, headers=header).json()
+    subreddit = get(url, headers=header, allow_redirects=False).json()
     if subreddit.get("error") == 404:
         return 0
     else:
