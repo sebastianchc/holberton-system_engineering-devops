@@ -43,20 +43,20 @@ server {
 	add_header X-Served-By $hostname;
 	error_page 404 /custom_404.html;
 	location = /custom_404.html {
-		 root /usr/share/nginx/html;
-		 internal;
+		root /usr/share/nginx/html;
+		internal;
 	}
 	location /hbnb_static {
-		 alias /data/web_static/current;
+		alias /data/web_static/current;
 	}
 	location /airbnb-onepage/ {
-		 proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
+		proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
 	}
 	location /airbnb-dynamic/number_odd_or_even/ {
-		 proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
+		proxy_pass http://0.0.0.0:5001/number_odd_or_even/;
 	}
 	location /api/ {
-		 proxy_pass http://0.0.0.0:5002/api/;
+		proxy_pass http://0.0.0.0:5002/api/;
 	}
 
 	location / {
