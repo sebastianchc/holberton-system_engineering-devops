@@ -58,11 +58,8 @@ server {
 	location /api/ {
 		proxy_pass http://0.0.0.0:5002/api/;
 	}
-
 	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
+		proxy_pass http://0.0.0.0:5003/2-hbnb;
 	}
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
