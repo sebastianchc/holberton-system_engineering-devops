@@ -58,9 +58,6 @@ server {
 	location /api/ {
 		proxy_pass http://0.0.0.0:5002/api/;
 	}
-	location / {
-		proxy_pass http://0.0.0.0:5003/2-hbnb;
-	}
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	#
